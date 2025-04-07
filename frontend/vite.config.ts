@@ -10,9 +10,9 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000, // Ensure this is a decimal, not an octal literal like 000
+    port: 3000, // Changed from 000 to valid number
   },
   build: {
-    chunkSizeWarningLimit: 1000, // Increase warning limit to 1000kB
+    chunkSizeWarningLimit: 1000,
   },
 });
