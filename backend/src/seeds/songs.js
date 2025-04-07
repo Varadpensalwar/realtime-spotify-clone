@@ -135,7 +135,7 @@ const songs = [
 
 const seedSongs = async () => {
 	try {
-		await mongoose.connect(process.env.MONGODB_URI);
+		await mongoose.connect(process.env.MongoDB_URI);
 
 		// Clear existing songs
 		await Song.deleteMany({});
