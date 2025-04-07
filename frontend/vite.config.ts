@@ -3,18 +3,16 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-	plugins: [react()],
-	resolve: {
-		alias: {
-			"@": path.resolve(__dirname, "./src"),
-		},
-	},
-	server: {
-		port: 3000,
-	},
-	build: {
-		chunkSizeWarningLimit: 1000, // Increase warning limit to 1000kB
-	  },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  server: {
+    port: 3000, // Ensure this is a decimal, not an octal literal like 000
+  },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase warning limit to 1000kB
+  },
 });
-
-
